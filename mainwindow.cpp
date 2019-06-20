@@ -5,15 +5,17 @@
 #include <QGraphicsScene>
 #include <QGraphicsItem>
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
-{
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow) {
+
     ui->setupUi(this);
 
     setWindowTitle("Chess");
 
     ui->graphicsView->setScene(&scene_);
+    ui->graphicsView->setFixedSize(850, 850);
+    //setFixedSize(500, 500);
 }
 
 MainWindow::~MainWindow()

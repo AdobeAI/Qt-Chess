@@ -17,6 +17,8 @@ public:
 
 private:
 
+    int cube_side;
+
 };
 
 #endif // CHESSPANEL_H
